@@ -1,0 +1,17 @@
+# Secrets — never commit
+.env
+.env.*
+
+# Per-worktree idea funnel (drifts across worktrees; canonical copy is local-only)
+BACKLOG.md
+
+# Dependencies / build output (uncomment what applies to your stack)
+node_modules/
+# dist/
+# build/
+# __pycache__/
+# .venv/
+
+# OS / editor
+.DS_Store
+*.log
