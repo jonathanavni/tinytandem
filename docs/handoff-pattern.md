@@ -247,7 +247,7 @@ Fill-in-the-blank packets live in [`../templates/`](../templates/):
 
 ### Required-reading rules
 
-Keep Codex's required reading short and task-specific. Always include `CLAUDE.md`, `PLAN.md` Current State, the relevant source files, and the relevant tests. Add schema/contract docs only when the change touches them. Do not bulk-load all of `.claude/memory/` by default — include only the memory files relevant to the task.
+Keep Codex's required reading short and task-specific. Always include `CLAUDE.md`, `PLAN.md` Current State, the relevant source files, and the relevant tests. Add `SCHEMA.md` (or your other contract docs) only when the change touches the schema or a contract. Add the relevant planning doc from `docs/` when one governs the work. Do not bulk-load all of `.claude/memory/` by default — include only the memory files relevant to the task.
 
 ### Good vs bad handoff
 

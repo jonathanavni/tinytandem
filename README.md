@@ -55,8 +55,12 @@ The other half of the system is keeping context across sessions without re-expla
 ├── CLAUDE.md                     # starter project memory — encodes the workflow; fill in the placeholders
 ├── PLAN.md                       # active work + cumulative Decisions Log
 ├── PLAN-archive.md               # completed / no-longer-load-bearing detail
+├── BACKLOG.md                    # idea funnel for unscoped, unprioritized work
+├── SCHEMA.md                     # optional: canonical data-model / contract doc
 ├── docs/
-│   └── handoff-pattern.md        # ← the centerpiece: how Claude hands off to Codex
+│   ├── README.md                 # what lives in docs/ (planning docs + draft specs)
+│   ├── handoff-pattern.md        # ← the centerpiece: how Claude hands off to Codex
+│   └── archive/                  # superseded planning docs and specs
 ├── templates/
 │   ├── implementation-handoff.md # fill-in-the-blank packet for an implementation slice
 │   └── review-handoff.md         # fill-in-the-blank packet for an adversarial review
@@ -70,9 +74,10 @@ The other half of the system is keeping context across sessions without re-expla
     │   └── core.md               # code-quality, behavior, safety, context-hygiene rules
     └── memory/
         ├── MEMORY.md             # index of the topic-based memory files
-        ├── decisions.md          # non-obvious choices + rationale
+        ├── decisions_product.md  # standing product / architecture decisions
         ├── gotchas.md            # sharp edges discovered the hard way
-        └── conventions.md        # naming / structure / workflow conventions
+        ├── conventions.md        # naming / structure / workflow conventions
+        └── sessions-archive.md   # one-line-per-session history index
 ```
 
 ---

@@ -2,8 +2,10 @@
 .env
 .env.*
 
-# Per-worktree idea funnel (drifts across worktrees; canonical copy is local-only)
-BACKLOG.md
+# Idea funnel — committed by default so the skeleton shows the pattern.
+# Uncomment to keep it local instead (recommended if you work across multiple git
+# worktrees, where a committed BACKLOG drifts between copies).
+# BACKLOG.md
 
 # Dependencies / build output (uncomment what applies to your stack)
 node_modules/

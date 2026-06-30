@@ -39,8 +39,10 @@ Each fact has ONE home. Keep these from drifting:
 
 - **`PLAN.md`** — active work: current-milestone tasks, technical design, verification, the session-by-session narrative, and the **cumulative Decisions Log** ("X over Y because Z" — never archived). Read at session start, update at session end.
 - **`PLAN-archive.md`** — full detail of completed / no-longer-load-bearing work, moved out of `PLAN.md` so Current State stays lean. Reviewed every `/wrapup`. The test: "still needed to understand current/next work?"
-- **`.claude/memory/`** — topic-based memory files (decisions, gotchas, conventions) indexed by `MEMORY.md`. Portable — copy the folder to onboard another agent with full context.
-- **`BACKLOG.md`** *(optional)* — idea funnel: unprioritized potential work; most never ships. Prioritized items get pulled into `PLAN.md`.
+- **`docs/`** — project documentation: the permanent methodology doc (`handoff-pattern.md`) plus your planning docs and draft specs. Superseded docs move to `docs/archive/` (see `docs/README.md`).
+- **`SCHEMA.md`** *(optional)* — the canonical data-model / contract doc, if your project has one. Update it in the same commit as any schema change.
+- **`.claude/memory/`** — topic-based memory files indexed by `MEMORY.md`: standing product/architecture decisions (`decisions_product.md`), `gotchas`, `conventions`, and a one-line-per-session history index (`sessions-archive.md`). Portable — copy the folder to onboard another agent.
+- **`BACKLOG.md`** — idea funnel: unprioritized potential work; most never ships. Prioritized items graduate into `PLAN.md`.
 
 `/start` reads these (read-only) to orient and propose; `/wrapup` updates them.
 
@@ -54,5 +56,6 @@ Each fact has ONE home. Keep these from drifting:
 |----------|--------------|
 | [`docs/handoff-pattern.md`](docs/handoff-pattern.md) | Before any Codex handoff — dispatch, role split, the ladder, synthesis discipline, templates |
 | `PLAN.md` | Session start — current state and decisions log |
-| `.claude/memory/MEMORY.md` | Index of project decisions, gotchas, conventions |
-| <your-spec-doc.md> | <when to read it> |
+| `.claude/memory/MEMORY.md` | Index of standing decisions, gotchas, conventions |
+| [`docs/README.md`](docs/README.md) | To find a planning doc or draft spec |
+| `SCHEMA.md` *(optional)* | Before writing schema- or contract-touching code |
