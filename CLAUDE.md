@@ -37,12 +37,12 @@
 
 Each fact has ONE home. Keep these from drifting:
 
-- **`PLAN.md`** — active work: current-milestone tasks, technical design, verification, the session-by-session narrative, and the **cumulative Decisions Log** ("X over Y because Z" — never archived). Read at session start, update at session end.
+- **`PLAN.md`** — active work: current-milestone tasks, technical design, verification, the session-by-session narrative, and the **cumulative Decisions Log** ("X over Y because Z" — never archived). Read at session start, update at session end. On larger projects, keep the launch/scope checklist in a canonical roadmap doc under `docs/` that `PLAN.md` *points to* rather than re-lists, so the two can't drift; `/start` reads it alongside `PLAN.md`.
 - **`PLAN-archive.md`** — full detail of completed / no-longer-load-bearing work, moved out of `PLAN.md` so Current State stays lean. Reviewed every `/wrapup`. The test: "still needed to understand current/next work?"
 - **`docs/`** — project documentation: the permanent methodology doc (`handoff-pattern.md`) plus your planning docs and draft specs. Superseded docs move to `docs/archive/` (see `docs/README.md`).
 - **`SCHEMA.md`** *(optional)* — the canonical data-model / contract doc, if your project has one. Update it in the same commit as any schema change.
 - **`.claude/memory/`** — topic-based memory files indexed by `MEMORY.md`: standing product/architecture decisions (`decisions_product.md`), `gotchas`, `conventions`, and a one-line-per-session history index (`sessions-archive.md`). Portable — copy the folder to onboard another agent.
-- **`BACKLOG.md`** — idea funnel: unprioritized potential work; most never ships. Prioritized items graduate into `PLAN.md`.
+- **`BACKLOG.md`** — idea funnel: unprioritized potential work; most never ships. Prioritized items graduate into `PLAN.md`. If you work across git worktrees, gitignore it and treat the primary worktree's copy as canonical, since copies drift.
 
 `/start` reads these (read-only) to orient and propose; `/wrapup` updates them.
 

@@ -200,7 +200,17 @@ After `NEEDS-ATTENTION`:
 
 Empirically across many sessions, each catches issues the other misses, and the two finding-sets are largely disjoint. For gating / correctness / security / payment code, **run both on the same diff** — not one or the other. Same-model review (only `/review`, or only Codex) shares blind spots within its own family. Cross-model is the high-leverage move.
 
-If your toolchain ships a security-specialized reviewer (e.g. Claude Code's built-in `/security-review`), treat it as a *third*, security-surface-only channel on top of generalist `/review` + Codex — not a universal gate.
+### 7.1 A security-specialized third channel
+
+If your toolchain ships a security-specialized reviewer (Claude Code's built-in `/security-review`, for example), treat it as a *third* channel on top of generalist `/review` + Codex, not a universal gate. Run it, in addition to the normal ladder, when a change touches a security surface:
+
+- Auth, sessions, access control
+- Payment, billing, or money-movement code
+- Public API wire, rate-limit / quota / payment gates
+- Secret and credential handling
+- Database migrations and the queries they expose
+
+Skip it on refactors, pure docs, and non-security features. It is typically same-model (Claude) and diff-aware (blind to pre-existing code), so keep the Codex pass for cross-model coverage, and run a baseline sweep separately for the code that already exists.
 
 ---
 
