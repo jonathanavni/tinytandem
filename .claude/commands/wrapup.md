@@ -26,7 +26,9 @@ End every productive session by persisting what happened. This is the other half
 
 4. **Doc hygiene (skip if no docs were touched and no milestone completed):** scan your docs for staleness — a new doc that isn't linked from the index, a doc whose body says "superseded" but wasn't moved, broken links to moved files, status lines still saying "pending" for work that shipped. **Surface, don't auto-fix** — the right correction is usually judgment-laden, and a wrong "fix" is worse than a stale doc. The one safe auto-fix is flipping a shipped item's status from "pending" to "shipped (commit/PR ref)".
 
-5. **Brief summary** — 3-5 sentences of what happened and what's next.
+5. **Falsified-claims grep (don't skip this one — it matters most when you *didn't* touch the docs):** search the canonical docs (`README`, `PLAN.md`, `docs/`) for statements today's work made false — a "no CI yet" after CI shipped, a "pending" for something that landed, a count or version the session moved. Fix the flips that are mechanical; surface the ones that need judgment.
+
+6. **Brief summary** — 3-5 sentences of what happened and what's next.
 
 ## Rules
 

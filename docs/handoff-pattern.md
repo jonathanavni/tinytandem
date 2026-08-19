@@ -142,6 +142,7 @@ When round 1 returns `NEEDS-ATTENTION` and Claude absorbs the findings, **run ro
 - Stale sub-sections in a doc when only the top-level was amended (sub-section drift)
 - New bugs introduced by absorbing round-1 findings
 - Cross-cutting concerns the round-1 fix exposed
+- Content the absorb step *invented* — a delegated fix-absorbing agent can add new mechanics or claims no reviewer proposed. Review the absorb diff itself, not just whether each finding was addressed.
 
 **Cap at round 3.** If round 4 is forming, the design primitive is wrong — redesign, do not patch further. Symptoms of a stuck design:
 
@@ -258,6 +259,8 @@ Fill-in-the-blank packets live in [`../templates/`](../templates/):
 ### Required-reading rules
 
 Keep Codex's required reading short and task-specific. Always include `CLAUDE.md`, `PLAN.md` Current State, the relevant source files, and the relevant tests. Add `SCHEMA.md` (or your other contract docs) only when the change touches the schema or a contract. Add the relevant planning doc from `docs/` when one governs the work. Do not bulk-load all of `.claude/memory/` by default — include only the memory files relevant to the task.
+
+When a packet depends on operational values from a locked spec or plan — thresholds, field names, exit codes, command flags — **quote them in the packet verbatim**. A paraphrased or remembered value silently overrides the spec, and the implementer has no way to notice.
 
 ### Good vs bad handoff
 

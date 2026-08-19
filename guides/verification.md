@@ -6,6 +6,8 @@ Read this when verifying work, writing quality gates, or setting up test strateg
 
 Never mark a task complete without proving it works. Give the agent a verification feedback loop (a test suite, a browser, a bash command) — this is the single biggest quality multiplier.
 
+A corollary for changes to LLM prompts: the empirical eval is the ground truth, not code review — a static read can approve a prompt change that measurably regresses behavior.
+
 ## Match the Harness to the Task
 
 Every harness component encodes an assumption about a model limitation. If the limitation doesn't apply, the component is overhead. Simplify first; add complexity only where capabilities hit a ceiling.
