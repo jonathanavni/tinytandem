@@ -4,6 +4,9 @@
      Detailed dated "X over Y because Z" decisions belong in PLAN.md's Decisions Log;
      this folder holds the durable, standing facts an agent needs mid-task.
      Add new topic files as domains emerge (e.g. gotchas_<area>.md). Prune when stale.
+     A memory reflects what was true when written: if an entry names a file, function,
+     or flag, verify it still exists before acting on it — and when it doesn't, fix or
+     delete the entry rather than working around it.
      The whole folder is portable — copy it to onboard another agent with full context. -->
 
 - [Product & Architecture Decisions](decisions_product.md) — standing product/architecture decisions and their current rationale

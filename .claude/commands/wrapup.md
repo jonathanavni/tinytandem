@@ -22,7 +22,7 @@ End every productive session by persisting what happened. This is the other half
    - Conventions established
    - Don't add obvious things. Don't duplicate what's in `PLAN.md`.
 
-3. **Check `MEMORY.md` size** — if it's getting long (~200 lines), suggest a consolidation pass to move old decisions into a separate topic file.
+3. **Check `MEMORY.md` size** — if it's getting long (~200 lines), suggest a consolidation pass. A consolidation pass means: merge duplicate entries, fix or delete facts that turned out to be wrong, collapse superseded entries into their topic file, lift decisions that became durable from `PLAN.md`'s log into `decisions_product.md`, and keep the index at one line per entry. Consolidation is its own small session, not a side effect of wrapup.
 
 4. **Doc hygiene (skip if no docs were touched and no milestone completed):** scan your docs for staleness — a new doc that isn't linked from the index, a doc whose body says "superseded" but wasn't moved, broken links to moved files, status lines still saying "pending" for work that shipped. **Surface, don't auto-fix** — the right correction is usually judgment-laden, and a wrong "fix" is worse than a stale doc. The one safe auto-fix is flipping a shipped item's status from "pending" to "shipped (commit/PR ref)".
 
