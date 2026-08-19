@@ -46,6 +46,14 @@ Each fact has ONE home. Keep these from drifting:
 
 `/start` reads these (read-only) to orient and propose; `/wrapup` updates them.
 
+## Situational Guides
+
+Deeper how-tos live in `guides/` and load on demand — CLAUDE.md is for behavior you need *always*; a guide is for reference you need *sometimes*. Read the relevant one when the situation comes up, and add your own as patterns recur:
+
+- Delegating work to subagents → [`guides/delegation.md`](guides/delegation.md)
+- Verifying work, writing tests, or shipping → [`guides/verification.md`](guides/verification.md)
+- Handing off to Codex → [`docs/handoff-pattern.md`](docs/handoff-pattern.md)
+
 ## Tools
 
 - **Codex plugin** — a fresh-context, different-model-family channel for (1) adversarial plan review pre-impl, (2) scoped implementation slices on a `codex/<task>` branch, (3) post-impl adversarial review, (4) rescue / deeper investigation when stuck. Claude dispatches Codex directly via bash; don't wait for the user to type a slash command. Canonical workflow + handoff packet templates: [`docs/handoff-pattern.md`](docs/handoff-pattern.md). Run it after `/review` for gating / correctness / security / payment code — cross-model catches blind spots same-model review shares.
@@ -57,5 +65,7 @@ Each fact has ONE home. Keep these from drifting:
 | [`docs/handoff-pattern.md`](docs/handoff-pattern.md) | Before any Codex handoff — dispatch, role split, the ladder, synthesis discipline, templates |
 | `PLAN.md` | Session start — current state and decisions log |
 | `.claude/memory/MEMORY.md` | Index of standing decisions, gotchas, conventions |
+| [`guides/delegation.md`](guides/delegation.md) | Before delegating work to a subagent |
+| [`guides/verification.md`](guides/verification.md) | When verifying work or setting up quality gates |
 | [`docs/README.md`](docs/README.md) | To find a planning doc or draft spec |
 | `SCHEMA.md` *(optional)* | Before writing schema- or contract-touching code |

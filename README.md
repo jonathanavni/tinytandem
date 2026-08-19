@@ -64,6 +64,9 @@ The other half of the system is keeping context across sessions without re-expla
 ├── templates/
 │   ├── implementation-handoff.md # fill-in-the-blank packet for an implementation slice
 │   └── review-handoff.md         # fill-in-the-blank packet for an adversarial review
+├── guides/
+│   ├── delegation.md             # in-Claude subagent delegation: when, the loop, prompt template
+│   └── verification.md           # quality gates, task contracts, test-first fixing
 └── .claude/
     ├── settings.json             # permissions + a format-on-write hook
     ├── commands/
